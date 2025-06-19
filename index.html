@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>جاري التحويل...</title>
+  <script>
+    window.onload = function () {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        // توجيه لأندرويد
+        window.location.href = "https://play.google.com/store/apps/details?id=com.oneway.ps.user";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        // توجيه لـ iOS
+        window.location.href = "https://apps.apple.com/us/app/oneway-ps/id6747039127";
+      } else {
+        // توجيه لأي جهاز آخر أو متصفح عادي
+        window.location.href = "https://oneway.ps";  // الموقع البديل
+      }
+    };
+  </script>
+</head>
+<body>
+  <p style="text-align:center; font-size:18px; margin-top:20%;">يرجى الانتظار، يتم تحويلك إلى المتجر المناسب...</p>
+</body>
+</html>
